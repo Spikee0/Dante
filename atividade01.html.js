@@ -8,3 +8,19 @@ seletorCor.addEventListener("input", (e) => {
 
    document.documentElement.style.setProperty("--primary-color",CorNova);
 })
+
+document.addEventListener("DOMContentLoaded", () => {
+
+   const rootStyles =
+       window
+           .getComputedStyle
+           (document.documentElement);
+
+   const primaryColor =
+       rootStyles
+           .getPropertyValue
+           ("--primary-color");
+
+   seletorCor.value =
+       primaryColor;
+})
